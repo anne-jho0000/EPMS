@@ -3,90 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website with Login & Signup Form | CodingNepal</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Company Portal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
+            background-color: white;
+            margin: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <span class="hamburger-btn material-symbols-rounded">menu</span>
-            <a href="#" class="logo">
-                <img src="images/EP LOGO-5.png" alt="logo">
-                <h2>EmployeePayroll</h2>
-            </a>
-            <ul class="links">
-                <span class="close-btn material-symbols-rounded">close</span>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#" class="login-trigger">Admin</a></li>
-                <li><a href="#" class="login-trigger">Employee</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="logo">Company Portal</div>
+        <div class="auth-buttons">
+            <button class="btn btn-primary">Employee Login</button>
+            <button class="btn btn-secondary">Admin Login</button>
+        </div>
     </header>
     
-    <div class="blur-bg-overlay"></div>
-    <div class="form-popup">
-        <span class="close-btn material-symbols-rounded">close</span>
-        <div class="form-box login">
-            <div class="form-details">
-                <h2>Welcome Back</h2>
-                <p>Please log in using your personal information to stay connected with us.</p>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Our Company Portal</h1>
+            <p>Access your work resources, manage projects, and connect with your team all in one place.</p>
+            <button class="btn btn-primary">Learn More</button>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h2>Dashboard</h2>
+                <p>View your personalized dashboard with real-time updates and important announcements.</p>
             </div>
-            <div class="form-content">
-                <h2>LOGIN</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <a href="#" class="forgot-pass-link">Forgot password?</a>
-                    <button type="submit">Log In</button>
-                </form>
-                <div class="bottom-link">
-                    Don't have an account?
-                    <a href="#" id="signup-link">Signup</a>
-                </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h2>Schedule</h2>
+                <p>Manage your calendar, appointments, and deadlines efficiently.</p>
             </div>
-        </div>
-        <div class="form-box signup">
-            <div class="form-details">
-                <h2>Create Account</h2>
-                <p>To become a part of our community, please sign up using your personal information.</p>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h2>Resources</h2>
+                <p>Access company documents, forms, and other important resources.</p>
             </div>
-            <div class="form-content">
-                <h2>SIGNUP</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Enter your email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Create password</label>
-                    </div>
-                    <div class="policy-text">
-                        <input type="checkbox" id="policy">
-                        <label for="policy">
-                            I agree to the
-                            <a href="#" class="option">Terms & Conditions</a>
-                        </label>
-                    </div>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <div class="bottom-link">
-                    Already have an account? 
-                    <a href="#" id="login-link">Login</a>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
