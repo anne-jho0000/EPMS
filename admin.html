@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPMS Admin Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0E0F14;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            width: 1000px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .left-panel {
+            background-color: #131722;
+            padding: 40px;
+            width: 50%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+        }
+        .logo {
+            display: block;
+            margin-bottom: 20px;
+            width: 120px;
+            align-self: flex-start;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .input-box {
+            display: flex;
+            align-items: center;
+            background-color: #1E1F26;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .input-box input {
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            width: 100%;
+        }
+        .icon {
+            margin-right: 10px;
+        }
+        .forgot-password {
+            color: #FFD700;
+            font-size: 12px;
+            text-align: right;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .login-button {
+            background: linear-gradient(145deg, #FFD700, #FFCC00);
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+        }
+        .contact-admin {
+            color: #FFD700;
+            font-weight: bold;
+        }
+        .footer {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .right-panel {
+            background-color: #FFC107;
+            padding: 40px;
+            width: 50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .right-panel h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .right-panel p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .illustration {
+            background: url('illustration.png') no-repeat center;
+            background-size: contain;
+            height: 150px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="epms(logo).jpg" alt="EPMS Logo" class="logo">
+            <h2>Login</h2>
+            <label for="adminID">Admin ID</label>
+            <div class="input-box">
+                <span class="icon">👤</span>
+                <input type="text" id="adminID" placeholder="Enter your admin ID">
+            </div>
+            <label for="password">Password</label>
+            <div class="input-box">
+                <span class="icon">🔒</span>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <button class="login-button">Login</button>
+            <p class="footer">Employment Payment Management System (EPMS)</p>
+        </div>
+        <div class="right-panel">
+            <h1>WELCOME BACK!</h1>
+            <p>"Welcome Back, Admin! Manage employee payments efficiently with EPMS. Stay in control of payroll, track transactions, and ensure seamless operations. Secure and reliable—your admin dashboard awaits!"</p>
+            <div class="illustration"></div>
+        </div>
+    </div>
+</body>
+</html>
